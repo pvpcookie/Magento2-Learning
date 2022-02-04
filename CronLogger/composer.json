@@ -1,0 +1,14 @@
+{
+    "name": "shaun/cron-logger",
+    "require": {
+        "magento/framework": "*"
+    },
+    "type": "magento2-module",
+    "license": [ ],
+    "autoload": {
+        "files": [ "registration.php" ],
+        "psr-4": {
+            "Learning\\CronLogger\\": ""
+        }
+    }
+}
