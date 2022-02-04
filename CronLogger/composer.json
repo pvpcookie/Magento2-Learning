@@ -1,7 +1,7 @@
 {
     "name": "shaun/cron-logger",
     "require": {
-        "magento/framework": "*"
+        "php": "~7.4.0"
     },
     "type": "magento2-module",
     "license": [ ],

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *  Magento2 Cron Configuration
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="learning_cron">
+        <job name="learning_logger" instance="Learning\CronLogger\Cron\CronLoggerModel" method="execute">
+            <schedule> * * * * * </schedule>
+        </job>
+    </group>
+</config>
