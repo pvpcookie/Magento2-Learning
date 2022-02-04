@@ -4,35 +4,46 @@
  * @package Learning/CronLogger
  */
 namespace Learning\CronLogger\Cron;
-use \Psr\Log\LoggerInterface;
+
+use Psr\Log\LoggerInterface;
+
 
 /**
  * @class CronLoggerModel
  */
 class CronLoggerModel
 {
-    /**
-     * @var ScopeConfigInterface
-     */
-    protected $scopeConfig;
+
 
     /**
      * @var LoggerInterface
      */
-    protected $logger;
+    protected LoggerInterface $logger;
 
     public function __construct(LoggerInterface $logger) {
         $this->logger = $logger;
     }
 
     /**
-     * Write to system.log
+     * Write to log
      *
      * @return void
      */
     public function execute() {
+        $date = date('Y-m-d');
+        $this->logger->info("
 
-        $this->logger->info( "IM HERE +++++++++++++++++++++++++++++++++++++++++++ ");
+            ===================================================================================================
+             _______    ______   .___________. _______   __    _______  __  .___________.     ___       __
+            |       \  /  __  \  |           ||       \ |  |  /  _____||  | |           |    /   \     |  |
+            |  .--.  ||  |  |  | `---|  |----`|  .--.  ||  | |  |  __  |  | `---|  |----`   /  ^  \    |  |
+            |  |  |  ||  |  |  |     |  |     |  |  |  ||  | |  | |_ | |  |     |  |       /  /_\  \   |  |
+            |  '--'  ||  `--'  |     |  |     |  '--'  ||  | |  |__| | |  |     |  |      /  _____  \  |  `----.
+            |_______/  \______/      |__|     |_______/ |__|  \______| |__|     |__|     /__/     \__\ |_______|
+
+            =========================================== WFT {$date} ===========================================
+
+        ");
 
     }
 }
